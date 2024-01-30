@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da forca Jequiti</title>
+</head>
+
+<body>
+    <script>
+        var vetorPalavra = ['a', 'm', 'o', 'e', 'b', 'a'];
+        var tamanhoPalavra = vetorPalavra.length;
+        var letras = [];
+
+        for (i = 0; i < tamanhoPalavra; i += 1) {
+            letras[i] = "_";
+        }
+        alert(letras)
+
+        var entrada;
+        while (letras != vetorPalavra) {
+            entrada = prompt('digite uma letra')
+
+            for (index = 0; index <= tamanhoPalavra; index++) {
+                if (vetorPalavra[index] == entrada) {
+                    letras[index] = entrada;
+                }
+            }
+            alert(letras)
+        }
+        alert("acertou a palavra")
+    </script>
+</body>
+
+</html>
